@@ -1,0 +1,21 @@
+.profile-stats {
+  display: flex;
+  justify-content: space-around;
+  background-color: burlywood;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.profile-stats div {
+  text-align: center;
+}
+.profile-stats h4 {
+  margin: 0;
+  color: #333;
+}
+
+
+
+
+
+

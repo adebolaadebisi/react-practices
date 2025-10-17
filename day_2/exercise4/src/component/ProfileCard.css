@@ -1,0 +1,9 @@
+.profile-card {
+  background-color: blueviolet;
+  width: 320px;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

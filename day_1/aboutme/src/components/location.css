@@ -1,0 +1,12 @@
+.location {
+  background: white;
+  color: #333;
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 3px solid #008751;
+  border-bottom: 3px solid #008751;
+}
+.location h2 {
+  color: #008751;
+  margin-bottom: 12px;
+}
