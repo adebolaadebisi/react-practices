@@ -1,13 +1,15 @@
 import React, { useState } from "react";
-const AddExpenseForm = ({ onAdd }) => {
+const AddExpenseForm = ({ addExpense }) => {
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
   const [category, setCategory] = useState("Food");
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAdd({ description, amount: parseFloat(amount), category });
+    if (!description || amount <= 0) return alert("Please enter valid details");
+    addExpense({ description, amount: parseFloat(amount), category });
     setDescription("");
     setAmount("");
+    setCategory("Food");
   };
   return (
     <form className="expense-form" onSubmit={handleSubmit}>
@@ -35,6 +37,34 @@ const AddExpenseForm = ({ onAdd }) => {
   );
 };
 export default AddExpenseForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

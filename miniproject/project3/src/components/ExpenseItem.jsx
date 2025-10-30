@@ -1,13 +1,6 @@
 import React, { useState } from "react";
-const categoryColors = {
-  Food: "#ffe0b2",
-  Transport: "#c8e6c9",
-  Bills: "#bbdefb",
-  Entertainment: "#f8bbd0",
-  Others: "#ddc9c9ff",
-};
 const ExpenseItem = ({ expense, onDelete, onEdit }) => {
-  const { id, description, amount, category, date } = expense;
+  const { id, description, amount, category, date, time } = expense;
   const [isEditing, setIsEditing] = useState(false);
   const [newDesc, setNewDesc] = useState(description);
   const [newAmt, setNewAmt] = useState(amount);
@@ -16,31 +9,43 @@ const ExpenseItem = ({ expense, onDelete, onEdit }) => {
     setIsEditing(false);
   };
   return (
-    <div
-      className="expense-item"
-      style={{ backgroundColor: categoryColors[category] }}
-    >
-      {isEditing ? (
-        <>
+    <tr>
+      <td>
+        {isEditing ? (
           <input value={newDesc} onChange={(e) => setNewDesc(e.target.value)} />
+        ) : (
+          description
+        )}
+      </td>
+      <td>{category}</td>
+      <td>{date}</td>
+      <td>{time}</td>
+      <td>
+        {isEditing ? (
           <input
             type="number"
             value={newAmt}
             onChange={(e) => setNewAmt(e.target.value)}
           />
+        ) : (
+          `₦${amount.toLocaleString()}`
+        )}
+      </td>
+      <td>
+        {isEditing ? (
           <button onClick={handleSave}>Save</button>
-        </>
-      ) : (
-        <>
-          <p>{description}</p>
-          <p>₦{amount.toLocaleString()}</p>
-          <p>{category}</p>
-          <p>{date}</p>
-          <button onClick={() => setIsEditing(true)}>Edit</button>
-          <button onClick={() => onDelete(id)}>Delete</button>
-        </>
-      )}
-    </div>
+        ) : (
+          <>
+            <button className="edit-btn" onClick={() => setIsEditing(true)}>
+              Edit
+            </button>
+            <button className="delete-btn" onClick={() => onDelete(id)}>
+              Delete
+            </button>
+          </>
+        )}
+      </td>
+    </tr>
   );
 };
 export default ExpenseItem;

@@ -10,17 +10,19 @@ const App = () => {
   const [filter, setFilter] = useState("All");
   const addExpense = (newExpense) => {
     if (!newExpense.description || newExpense.amount <= 0) return;
-    setExpenses([
-      ...expenses,
-      { ...newExpense, id: Date.now(), date: new Date().toLocaleDateString() },
-    ]);
+    const now = new Date();
+    const date = now.toLocaleDateString();
+    const time = now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+    setExpenses([...expenses, { ...newExpense, id: Date.now(), date, time }]);
   };
   const deleteExpense = (id) => {
     setExpenses(expenses.filter((exp) => exp.id !== id));
   };
-  const editExpense = (id, updated) => {
+  const editExpense = (id, updatedFields) => {
     setExpenses(
-      expenses.map((exp) => (exp.id === id ? { ...exp, ...updated } : exp))
+      expenses.map((exp) =>
+        exp.id === id ? { ...exp, ...updatedFields } : exp
+      )
     );
   };
   const filteredExpenses =
@@ -28,20 +30,35 @@ const App = () => {
       ? expenses
       : expenses.filter((exp) => exp.category === filter);
   return (
-    <div className="app-container">
+    <div className="container">
       <Header />
-      <AddExpenseForm onAdd={addExpense} />
+      <AddExpenseForm addExpense={addExpense} />
       <CategoryFilter setFilter={setFilter} current={filter} />
-      <ExpenseStats expenses={filteredExpenses} />
       <ExpenseList
         expenses={filteredExpenses}
         onDelete={deleteExpense}
         onEdit={editExpense}
       />
+      <ExpenseStats expenses={filteredExpenses} />
     </div>
   );
 };
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

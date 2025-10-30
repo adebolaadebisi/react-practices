@@ -1,190 +1,188 @@
 
-  /* =============================
-     GENERAL STYLES
-  ============================= */
-  body {
-    font-family: "Poppins", sans-serif;
-    background-color: antiquewhite;
-    margin: 0;
-    padding: 0;
-  }
+ 
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f8ff;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 20px auto;
+  background: rgb(127, 75, 199);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/* ===== HEADER ===== */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.header h1 {
+  margin: 0;
+  color: #007bff;
+}
+/* ===== FORM ===== */
+.expense-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+.expense-form input,
+.expense-form select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+}
+.expense-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.expense-form button:hover {
+  background-color: #0056b3;
+}
+/* ===== FILTER BUTTONS ===== */
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px; 
+  padding-bottom: 10px;
+}
 
-  .app-container {
-    width: 90%;
-    max-width: 700px;
-    margin: 2rem auto;
-    background: #53458f;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  /* =============================
-     HEADER
-  ============================= */
-  .header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .header h1 {
-    font-size: 1.8rem;
-    margin-bottom: 5px;
-  }
-
-  /* =============================
-     ADD EXPENSE FORM
-  ============================= */
+.filter-buttons::after {
+  content: "";
+  display: block;
+  width: 85%;
+  margin: 15px auto 0;
+  border-bottom: 1px solid #ddd;
+  opacity: 0.6;
+}
+.filter-buttons button {
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #eaeaea;
+  transition: all 0.2s ease;
+}
+.filter-buttons button:hover {
+  background-color: #dcdcdc;
+}
+.filter-buttons .active {
+  background-color: #007bff;
+  color: white;
+}
+/* ===== TABLE ===== */
+.expense-table-container {
+  overflow-x: auto;
+  margin-bottom: 25px; /
+}
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.expense-table th,
+.expense-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+.expense-table th {
+  background-color: #007bff;
+  color: white;
+}
+.expense-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.expense-table tr:hover {
+  background-color: #eef7ff;
+}
+/* ===== BUTTONS ===== */
+.edit-btn {
+  background-color: #ffc107;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 4px;
+  transition: background-color 0.2s ease-in-out;
+}
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+.delete-btn:hover {
+  background-color: #b52a37;
+}
+/* ===== STATS ===== */
+.stats {
+  margin-top: 20px;
+  background-color: #f1f7ff;
+  padding: 15px;
+  border-radius: 10px;
+}
+.stats h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+.stats ul {
+  list-style: none;
+  padding-left: 0;
+}
+.stats li {
+  margin-bottom: 5px;
+}
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
   .expense-form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 20px;
+    flex-direction: column;
   }
-
-  .expense-form input,
-  .expense-form select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 0.95rem;
+  .filter-buttons {
+    gap: 6px;
   }
-
-  .expense-form button {
-    padding: 8px 16px;
-    border: none;
-    background-color: #007bff;
-    color: white;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.2s;
+  .expense-table th,
+  .expense-table td {
+    padding: 6px;
+    font-size: 0.8rem;
   }
+}
 
-  .expense-form button:hover {
-    background-color: #0056b3;
-  }
 
-  /* =============================
-     FILTER BUTTONS
-  ============================= */
-  .filter-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
 
-  .filter-btn {
-    background-color: #ffffff;
-    border: 2px solid #007bff;
-    color: #007bff;
-    padding: 8px 16px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.95rem;
-    transition: all 0.2s ease-in-out;
-  }
 
-  .filter-btn:hover {
-    background-color: #007bff;
-    color: white;
-  }
 
-  .filter-btn.active {
-    background-color: #007bff;
-    color: white;
-  }
 
-  /* =============================
-     EXPENSE ITEM
-  ============================= */
-  .expense-item {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    align-items: center;
-    gap: 8px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-  }
 
-  .expense-item button {
-    padding: 5px 10px;
-    font-size: 0.85rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
 
-  .expense-item button:first-of-type {
-    background-color: #ffc107;
-  }
 
-  .expense-item button:last-of-type {
-    background-color: #dc3545;
-    color: white;
-  }
 
-  /* =============================
-     STATS
-  ============================= */
-  .stats-container {
-    background: #f1f1f1;
-    padding: 10px;
-    margin: 15px 0;
-    border-radius: 8px;
-  }
 
-  /* =============================
-     RESPONSIVE DESIGN
-  ============================= */
-  @media (max-width: 768px) {
-    .app-container {
-      width: 95%;
-      padding: 15px;
-    }
 
-    .expense-form input,
-    .expense-form select {
-      flex: 1 1 45%;
-    }
 
-    .expense-item {
-      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-    }
 
-    .header h1 {
-      font-size: 1.5rem;
-    }
-  }
 
-  @media (max-width: 480px) {
-    .expense-form {
-      flex-direction: column;
-      align-items: stretch;
-    }
 
-    .expense-form input,
-    .expense-form select,
-    .expense-form button {
-      width: 100%;
-    }
 
-    .filter-container {
-      flex-wrap: wrap;
-    }
 
-    .filter-btn {
-      flex: 1 1 45%;
-    }
 
-    .expense-item {
-      grid-template-columns: 1fr 1fr;
-    }
 
-    .header h1 {
-      font-size: 1.3rem;
-    }
-  }
+
+

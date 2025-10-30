@@ -1,26 +1,36 @@
 import React from "react";
 const ExpenseStats = ({ expenses }) => {
-  const total = expenses.reduce((sum, e) => sum + e.amount, 0);
+  if (expenses.length === 0)
+    return <p className="no-stats">No expenses to show.</p>;
+  const total = expenses.reduce((sum, exp) => sum + exp.amount, 0);
+  const highest = Math.max(...expenses.map((exp) => exp.amount));
   const count = expenses.length;
-  const highest = expenses.length
-    ? Math.max(...expenses.map((e) => e.amount))
-    : 0;
-  const breakdown = expenses.reduce((acc, e) => {
-    acc[e.category] = (acc[e.category] || 0) + e.amount;
+  const categoryTotals = expenses.reduce((acc, exp) => {
+    acc[exp.category] = (acc[exp.category] || 0) + exp.amount;
     return acc;
   }, {});
   return (
-    <div className="stats-container">
-      <p><b>Total:</b> ₦{total.toLocaleString()}</p>
-      <p><b>Expenses:</b> {count}</p>
-      <p><b>Highest:</b> ₦{highest.toLocaleString()}</p>
-      <div>
-        <b>By Category:</b>
-        {Object.entries(breakdown).map(([cat, amt]) => (
-          <p key={cat}>{cat}: ₦{amt.toLocaleString()}</p>
+    <div className="stats">
+      <h3>Statistics</h3>
+      <p>Total Spent: ₦{total.toLocaleString()}</p>
+      <p>Number of Expenses: {count}</p>
+      <p>Highest Single Expense: ₦{highest.toLocaleString()}</p>
+      <h4>Spending by Category:</h4>
+      <ul>
+        {Object.entries(categoryTotals).map(([cat, amt]) => (
+          <li key={cat}>
+            {cat}: ₦{amt.toLocaleString()}
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };
 export default ExpenseStats;
+
+
+
+
+
+
+
