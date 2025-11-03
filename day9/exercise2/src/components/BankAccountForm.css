@@ -1,0 +1,71 @@
+.bank-form-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #d10fb1;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 10px rgba(207, 125, 17, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #222;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 8px;
+}
+
+button {
+  width: 100%;
+  margin-top: 16px;
+  padding: 10px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+
+.account-list {
+  margin-top: 1.5rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.account-item {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}

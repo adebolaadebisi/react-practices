@@ -1,0 +1,104 @@
+.profile-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: rgb(209, 30, 185);
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+input,
+select,
+textarea {
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.image-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #4a90e2;
+  margin-bottom: 8px;
+}
+
+.placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 2px dashed #aaa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.radio-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 6px;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #4a90e2;
+  color: white;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  background: #f44336;
+}
+
+button:hover {
+  opacity: 0.9;
+}

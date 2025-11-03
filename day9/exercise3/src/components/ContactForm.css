@@ -1,0 +1,93 @@
+.contact-form-container {
+  width: 90%;
+  max-width: 500px;
+  margin: 2rem auto;
+  background: #a5849b4d;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  resize: none;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #007bff, #00c6ff);
+}
+
+.reset-btn {
+  background: #888;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin: 4px 0;
+}
+
+.success {
+  margin-top: 1rem;
+  text-align: center;
+  color: green;
+  font-weight: 600;
+}
+
+.char-counter {
+  font-size: 0.8rem;
+  color: #555;
+  text-align: right;
+  margin-top: 2px;
+}
+
+.messages-list {
+  margin-top: 2rem;
+  background: #f9f9f9;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.message-item {
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem 0;
+}

@@ -1,0 +1,64 @@
+.uni-container {
+  text-align: center;
+  padding: 2rem;
+  background: #a3149c;
+  max-width: 600px;
+  margin: 2rem auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-input {
+  width: 80%;
+  padding: 10px;
+  margin: 1rem 0;
+  border-radius: 8px;
+  border: 1px solid #aa3232;
+  font-size: 1rem;
+}
+
+.count {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.uni-list {
+  list-style: none;
+  padding: 0;
+}
+
+.uni-item {
+  background: #f9f9f9;
+  margin: 10px 0;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.uni-item:hover {
+  transform: scale(1.02);
+}
+
+.uni-item h3 {
+  margin: 0;
+  color: #2c3e50;
+}
+
+.uni-item p {
+  margin: 6px 0;
+  color: #555;
+}
+
+.uni-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.uni-item a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+  font-weight: 600;
+}

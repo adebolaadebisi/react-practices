@@ -1,0 +1,48 @@
+.user-container {
+  text-align: center;
+  padding: 2rem;
+background-color: white;
+  max-width: 400px;
+  margin: 2rem auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile {
+  margin-top: 1rem;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #4caf50, #81c784);
+  border: none;
+  border-radius: 8px;
+ color: #9e1675;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #388e3c, #66bb6a);
+}
+
+.counter {
+  margin-top: 1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.error {
+  color: red;
+  font-weight: 600;
+}

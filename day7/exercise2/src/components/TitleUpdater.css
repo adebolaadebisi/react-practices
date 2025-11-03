@@ -1,0 +1,46 @@
+.title-container {
+  text-align: center;
+  background-color: aquamarine;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(150, 26, 150, 0.1);
+}
+
+.title-container input {
+  width: 80%;
+  padding: 8px;
+  margin-top: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.preview {
+  margin-top: 10px;
+  font-style: italic;
+  color: #730b92;
+}
+
+.counter {
+  margin-top: 4px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+button {
+  margin-top: 12px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: linear-gradient(90deg, pink, white, purple);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}

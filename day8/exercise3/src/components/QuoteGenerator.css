@@ -1,0 +1,64 @@
+.quote-container {
+  text-align: center;
+  background: #aa0b95;
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.quote-box {
+  margin: 1.5rem 0;
+}
+
+.quote-text {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.quote-author {
+  font-weight: bold;
+  color: #333;
+}
+
+.quote-length,
+.quote-count {
+  margin-top: 0.4rem;
+  color: #666;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #2196f3, #21cbf3);
+  color: rgb(24, 8, 116);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #1976d2, #64b5f6);
+}
+
+.error {
+  color: red;
+  font-weight: 600;
+}
+
+.copied {
+  margin-top: 0.5rem;
+  color: green;
+  font-weight: 600;
+}

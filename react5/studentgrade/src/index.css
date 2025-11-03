@@ -1,0 +1,89 @@
+
+.grade-container {
+  max-width: 600px;
+  margin: 50px auto;
+  background: #235ed3;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+.grade-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+.form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 150px;
+}
+.form button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.form button:hover {
+  background: #45a049;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+th {
+  background: #f0f0f0;
+}
+.grade.A {
+  color: #2e8b57;
+  font-weight: bold;
+}
+.grade.B {
+  color: #1e90ff;
+  font-weight: bold;
+}
+.grade.C {
+  color: #ffa500;
+  font-weight: bold;
+}
+.grade.D,
+.grade.E {
+  color: #ff8c00;
+  font-weight: bold;
+}
+.grade.F {
+  color: red;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

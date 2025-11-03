@@ -1,0 +1,36 @@
+.stopwatch-container {
+  text-align: center;
+  background: #9e7272;
+  padding: 20px;
+  border-radius: 12px;
+  width: 260px;
+  margin: 40px auto;
+  box-shadow: 0 0 10px rgba(109, 136, 136, 0.1);
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background: linear-gradient(90deg, rgb(78, 65, 67), white, rgb(57, 6, 104));
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.laps {
+  margin-top: 15px;
+  text-align: left;
+}
