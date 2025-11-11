@@ -1,100 +1,36 @@
 import React from "react";
 
-function App() {
-  const products = [
-    {
-      name: "Jollof Rice",
-      price: "₦1,500",
-      image:
-        "https://images.unsplash.com/photo-1606112219348-204d7d8b94ee?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      name: "Ankara Fabric",
-      price: "₦5,000",
-      image:
-        "https://images.unsplash.com/photo-1602810317536-4ef58b2c6c0f?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      name: "Suya",
-      price: "₦1,000",
-      image:
-        "https://images.unsplash.com/photo-1605475128021-8f2e79a9aa5c?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      name: "Aso-Ebi",
-      price: "₦15,000",
-      image:
-        "https://images.unsplash.com/photo-1620812093339-dc252e21b90e?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      name: "Palm Wine",
-      price: "₦1,200",
-      image:
-        "https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      name: "Agbada",
-      price: "₦25,000",
-      image:
-        "https://images.unsplash.com/photo-1632463541642-7e8cb0cfb8c8?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      name: "Chin Chin",
-      price: "₦500",
-      image:
-        "https://images.unsplash.com/photo-1648840747662-41b69d6345b4?auto=format&fit=crop&w=800&q=80",
-    },
-    {
-      name: "Puff Puff",
-      price: "₦300",
-      image:
-        "https://images.unsplash.com/photo-1621267471651-df3683faaa91?auto=format&fit=crop&w=800&q=80",
-    },
-  ];
+const products = [
+  { name: "Jollof Rice", price: "₦1,500", image: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Jollof_Rice_with_Stew.jpg/1024px-Jollof_Rice_with_Stew.jpg" },
+  { name: "Ankara Fabric", price: "₦5,000", image: "https://i.ebayimg.com/images/g/Xq0AAOSwsEBivdJn/s-l1600.webp"},
+  { name: "Aso-Ebi", price: "₦15,000", image: "https://lh3.googleusercontent.com/p/AF1QipPF6Z8jN4YEKS7yg0404G_VUhWTs2TFk6AZ0Ibb=w260-h175-n-k-no" },
+  { name: "Palm Wine", price: "₦1,200", image: "https://www.shutterstock.com/image-photo/palm-wine-date-tree-clay-260nw-1407988373.jpg"},
+  { name: "Agbada", price: "₦25,000",   image: "https://wp-media-dejiandkola.s3.eu-west-2.amazonaws.com/2022/01/271991584_678990703272715_7196684419559663964_n.jpg"},
+  { name: "Chin Chin", price: "₦500", image: "https://egunsifoods.com/cdn/shop/articles/Chin_Chin_2100x.jpg?v=1639595235"},
+  { name: "Puff Puff", price: "₦300", image: "https://allnigerianfoods.com/wp-content/uploads/puff_puff_recipe-500x500.jpg" },
+];
 
+function App() {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-bold text-center mb-8 text-green-700">
-        🛒 Naija Market
-      </h1>
-
-      <div
-        className="
-          grid gap-6
-          grid-cols-1
-          sm:grid-cols-2
-          md:grid-cols-3
-          lg:grid-cols-4
-        "
-      >
-        {products.map((item, i) => (
+      <h1 className="text-3xl font-bold text-center mb-6">Our Products</h1>
+      
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {products.map((product, index) => (
           <div
-            key={i}
-            className="
-              bg-white rounded-xl shadow-md overflow-hidden cursor-pointer
-              transition-transform transform hover:-translate-y-2 hover:scale-105 hover:shadow-xl
-            "
+            key={index}
+            className="bg-white p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
           >
-            {/* Product Image */}
             <img
-              src={item.image}
-              alt={item.name}
-              className="h-48 w-full object-cover hover:opacity-90 transition-opacity"
+              src={product.image}
+              alt={product.name}
+              className="w-full h-40 object-cover rounded"
             />
-
-            {/* Product Info */}
-            <div className="p-4 text-center">
-              <h2 className="font-semibold text-lg">{item.name}</h2>
-              <p className="text-green-600 font-bold mb-3">{item.price}</p>
-              <button
-                className="
-                  bg-green-600 text-white px-4 py-2 rounded-lg w-full
-                  hover:bg-green-700 transition-colors
-                "
-              >
-                Buy Now
-              </button>
-            </div>
+            <h2 className="text-lg font-semibold mt-2">{product.name}</h2>
+            <p className="text-green-600 font-bold">{product.price}</p>
+            <button className="mt-3 w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 transition-colors">
+              Buy Now
+            </button>
           </div>
         ))}
       </div>
