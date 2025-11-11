@@ -22,7 +22,7 @@ function ProfileCard() {
       </div>
       {/* Card Body */}
       <div className="py-8 px-6 flex flex-col items-center">
-        <h2 className="text-xl font-bold">Gbemisola Ololade Victoria</h2>
+        <h2 className="text-xl font-bold">odefemi adebisi</h2>
         <p className="text-gray-500 text-sm">AI and Web Developer</p>
         <p className="text-gray-700 text-xs mb-4">Abeokuta, Nigeria</p>
         <div className="flex space-x-4 mb-4">
