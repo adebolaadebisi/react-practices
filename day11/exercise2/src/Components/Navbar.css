@@ -1,0 +1,45 @@
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  background-color: #006400; 
+  padding: 15px 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #ffb84d; 
+  color: #fff;
+}
+
+.active {
+  background-color: #ff9800;
+  color: #fff;
+  font-weight: 600;
+}
+
+
+@media (max-width: 600px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  nav a {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}

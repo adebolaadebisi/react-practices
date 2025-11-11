@@ -1,0 +1,27 @@
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f5f7fa;
+  margin: 0;
+}
+.scroll-page {
+  padding: 40px;
+}
+.scroll-btn {
+  position: fixed;
+  right: 20px;
+  padding: 10px 14px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.scroll-btn:hover {
+  background: #0056b3;
+}
+.scroll-btn.top {
+  bottom: 20px;
+}
+.scroll-btn.bottom-btn {
+  bottom: 70px;
+}
